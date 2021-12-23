@@ -1,0 +1,80 @@
+.ControlBar {
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: 30px;
+    max-height: 30px;
+    -webkit-app-region: drag;
+}
+  
+.Logo {
+    margin: 6px 10px;
+}
+
+.Button .Svg {
+    margin: 0px 0px;
+}
+
+.Button .Svg path{
+    fill:#b8b8b8;
+}
+
+.Button:hover .Svg{
+    fill:#f2f2f2;
+}
+
+.Button {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 15px;
+    max-height: 30px;
+    max-width: 30px;
+    text-decoration: none;
+    font-size: 17px;
+    -webkit-app-region: no-drag;
+}
+.Button:hover {
+    cursor: pointer;
+    background-color:rgb(75, 75, 75);
+}
+.Button:active {
+    background-color:rgb(100, 100, 100);
+}
+
+
+.ButtonClose .Svg {
+    margin: 4px 0px;
+}
+
+.ButtonClose .Svg path{
+    fill:#b8b8b8;
+}
+
+.ButtonClose .Svg g path{
+    fill:#b8b8b8;
+}
+
+.ButtonClose:hover .Svg{
+    fill:#f2f2f2;
+    stroke:#f2f2f2;
+    stroke-width: 2px;
+}
+
+.ButtonClose {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 15px;
+    max-height: 30px;
+    text-decoration: none;
+    font-size: 17px;
+    -webkit-app-region: no-drag;
+    fill: #f2f2f2;
+}
+.ButtonClose:hover {
+    cursor: pointer;
+    background-color:rgb(158, 27, 27);
+}
+.ButtonClose:active {
+    background-color:rgb(189, 52, 52);
+}

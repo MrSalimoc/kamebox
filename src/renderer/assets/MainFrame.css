@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+.MainFrame {
+    background: linear-gradient(212deg, #0049ff, #ff0000);
+    background-size: 400% 400%;
+
+
+    -webkit-animation: BgColor 4s ease infinite;
+    -moz-animation: BgColor 4s ease infinite;
+    animation: BgColor 4s ease infinite;
+}
+
+@-webkit-keyframes BgColor {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+@-moz-keyframes BgColor {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+@keyframes BgColor {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}

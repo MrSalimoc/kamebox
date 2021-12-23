@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Electron React!</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    var isMaximizedData = false;
+    window.electron.ipcRenderer.once('ipc-example', (arg) => {
+      // eslint-disable-next-line no-console
+      console.log(arg);
+    });
+
+    window.electron.ipcRenderer.myPing();
+
+    function minimize() {
+      window.electron.ipcRenderer.minimize();
+    }
+    function closeWindow() {
+      window.electron.ipcRenderer.closeWindow();
+    }
+    function maximize() {
+      console.log("maximize");
+      window.electron.ipcRenderer.maximize();
+    }
+    function unMaximize() {
+      console.log("unmaximize");
+      window.electron.ipcRenderer.unMaximize();
+    }
+
+    function changeWindowState() {
+      window.electron.ipcRenderer.isMaximized();
+      if (isMaximizedData == true) {
+        unMaximize();
+      } else {
+        maximize();
+      }
+      window.electron.ipcRenderer.isMaximized();
+    }
+
+    window.electron.ipcRenderer.on('isMaximized', (arg) => {
+      // eslint-disable-next-line no-console
+      console.log("regle maximized sur ", arg);
+      isMaximizedData = arg;
+    });
+  </script>
+</html>
